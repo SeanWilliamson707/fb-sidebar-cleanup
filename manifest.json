@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "FB Sidebar Cleanup",
+  "version": "0.1",
+  "description": "Compliments facebook news feed removal tool by clearing the sidebar of useless lists, namely the 'apps' section.",
+  "content_scripts": [{
+    "js": ["cleaner.js"],
+    "matches": [ "https://*.facebook.com/*", "http://*.facebook.com/*"],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "web_accessible_resources": ["cleaner.js"]
+}
